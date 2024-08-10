@@ -292,3 +292,38 @@ def plot_histogram(df, column):
   """
   df[column].hist()
   plt.show()
+
+
+# Process a folder of JSON files.
+# Extract file URLs from each JSON file.
+# Potentially handle different JSON structures.
+
+import json
+import os
+
+def extract_file_urls(folder_path):
+  """Extracts file URLs from JSON files in a specified folder.
+
+  Args:
+    folder_path: Path to the folder containing JSON files.
+
+  Returns:
+    A list of extracted file URLs.
+  """
+
+  file_urls = []
+  for filename in os.listdir(folder_path):
+    if filename.endswith('.json'):
+      file_path = os.path.join(folder_path, filename)
+      with open(file_path, 'r') as f:
+        data = json.load(f)
+        # Adjust the following line based on JSON structure
+        file_urls.extend([item['file_url'] for item in data if 'file_url' in item])
+
+  return file_urls
+
+# Example usage:
+folder_path = 'path/to/json/files'
+urls = extract_file_urls(folder_path)
+print(urls)
+
