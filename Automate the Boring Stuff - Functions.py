@@ -25,3 +25,18 @@ def plusOne(number):
 
 number = plusOne(5)
 print(number)
+
+print('Cat','dog','mouse',sep='ABC')
+
+
+total_eggs = 0 # global variable
+
+def BeatEggs():
+    eggs_native = 10
+    eggs_imported = 1
+    total_eggs_toBeat = eggs_native + eggs_imported
+    # print('total eggs to beat: ' + str(total_eggs_toBeat))
+    return total_eggs_toBeat
+
+total_eggs = BeatEggs()
+print('Eggs to beat: ' + str(total_eggs))
