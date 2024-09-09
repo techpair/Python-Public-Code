@@ -12,3 +12,16 @@ sys.exit()
 # In command line, type cd "Program Files\Python 3.5\Scripts"
 # In command line, type pip.exe install moduleName
 # In command line, type exit
+
+# Writing Your Own Functions
+
+def hello():
+  print("Howdy")
+
+hello()
+
+def plusOne(number):
+    return number + 1
+
+number = plusOne(5)
+print(number)
