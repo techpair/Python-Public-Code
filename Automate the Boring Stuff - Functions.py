@@ -40,3 +40,25 @@ def BeatEggs():
 
 total_eggs = BeatEggs()
 print('Eggs to beat: ' + str(total_eggs))
+
+def divBy(numberToDiv,dividyBy):
+  try:
+    return numberToDiv/dividyBy
+  except ZeroDivisionError:
+    print("Cannot divide by 0")
+
+# except can have no argument
+
+print(divBy(1,0))
+
+print("how many cats do you have?")
+numCats = input()
+try:
+  if int(numCats) >=4:
+    print("A lot of cats")
+  else:
+    print("not a lot of cats")
+except ValueError:
+  print("Should be numerical")
+  
+
