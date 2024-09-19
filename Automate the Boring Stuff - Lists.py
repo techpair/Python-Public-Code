@@ -64,3 +64,26 @@ spam = 42
 spam = spam +1
 spam +=1
 
+spam = ['hello', 'hi', 'howdy', 'heyas']
+print(spam.index('heyas')) # first value in a duplicate record in list
+
+spam.append('new') # adds new record but we don't do spam = spam.append since the function's actual return value is None
+print(spam)
+
+spam.insert(2, 'second new')
+print(spam)
+
+spam.remove('second new') # only removes the first instance of the parameter
+del spam[len(spam)-1]
+print(spam)
+
+sortedThisNumber = [9, 7, 5, 3 ,1]
+sortedThisNumber.sort()
+print(sortedThisNumber)
+sortedThisAnimalNames = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+sortedThisAnimalNames.sort(reverse=True)
+print(sortedThisAnimalNames)
+
+# Ascii betical order; lower cases come after upper cases
+
+sortedThisAnimalNames.sort(key=str.lower) # to sort on true alphabetical order regardless of the case
